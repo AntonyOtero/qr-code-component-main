@@ -4,7 +4,7 @@
   /* Colors */
   --color-white: hsl(0, 0%, 100%);
   --color-light-gray: hsl(212, 45%, 89%);
-  --color-grayish-blue: hsl(220, 45%, 55%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
   --color-dark-blue: hsl(218, 44%, 22%);
   /* Typography */
   --font-family: "Outfit", sans-serif;
@@ -44,7 +44,7 @@ body {
 }
 
 .card .context {
-  margin: 24px 0;
+  margin: 16px 0;
   padding: 0 16px;
 }
 
