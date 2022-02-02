@@ -19,7 +19,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/qr-code-component-using-css-variables-ve4u1i1Ft](https://www.frontendmentor.io/solutions/qr-code-component-using-css-variables-ve4u1i1Ft)
 - Live Site URL: [https://antonyotero.github.io/qr-code-component-main/](https://antonyotero.github.io/qr-code-component-main/)
 
 ## My process
