@@ -55,7 +55,7 @@ main {
 }
 
 .card .context {
-  margin: 24px 0;
+  margin: 16px 0;
   padding: 0 16px;
 }
 
@@ -80,6 +80,7 @@ main {
 
 .attribution { 
   padding: 16px;
+  line-height: 18.9px;
   font-size: var(--font-size);
   text-align: center;
   color: var(--color-dark-blue);
