@@ -8,96 +8,78 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://antonyotero.github.io/qr-code-component-main/](https://antonyotero.github.io/qr-code-component-main/)
 
 ## My process
 
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+This project was fairly simple, but some useful CSS tricks and features were put into use. Mainly CSS variables and centering elements using either grids or by setting an element's position and transform properties.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+#### __CSS Variables__
+
+I created [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) by targeting the [:root pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) and setting the variables to the values given in the style-guide.md file. In this context the :root pseudo-class represents the html element. While CSS variables can be defined in any scope, it is best practice to define them on the :root pseudo-class. This is so that they can be applied globally.
+
+All variables are required to be prefixed with `--` and written in kebab-case. I chose to group related variables by defining them under a common heading and then using the heading as the start of the variable name.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 45%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+  /* Typography */
+  --font-family: "Outfit", sans-serif;
+  --font-size: 15px;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+To use the css variables, you can use the [var()](https://developer.mozilla.org/en-US/docs/Web/CSS/var) function.
+
+```css
+body {
+  font: var(--font-size) var(--font-family);
+  background: var(--color-light-gray);
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+#### __Centering elements__
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The first method I used to center elements was to set the target elements parent to a [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) and then set the [place-items](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items) property to center.
 
-### Continued development
+```css
+body {
+  display: grid;
+  place-items: center;
+}
+```
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Another method for centering elements I used in this project is to set the target element's [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position) property to abosolute. Then set the `top` and `left` properties to 50% of the parent element's width and height respectively. lastly, set the [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property to `translate(-50%, -50%)` to center the element. This is necessary because the element's origin is not at the center of the element but at the top left corner of the element.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+```css
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@AntonyOtero](https://www.frontendmentor.io/profile/AntonyOtero)
+- Twitter - [@AntonyOtero](https://twitter.com/AntonyOtero)
