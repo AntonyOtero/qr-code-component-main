@@ -29,6 +29,11 @@ main {
   width: 100vw;
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 /* Class styles */
 .card {
   position: absolute;
@@ -49,7 +54,7 @@ main {
 }
 
 .card .context {
-  margin: 16px 0;
+  margin: 24px 0;
   padding: 0 16px;
 }
 
@@ -59,15 +64,15 @@ main {
 }
 
 .card .context h1 {
-  margin: 0 0 16px;
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 22px;
-  line-height: 28px;
+  line-height: 27.72px;
   color: var(--color-dark-blue);
 }
 
 .card .context p {
-  line-height: 19px;
+  line-height: 18.9px;
   letter-spacing: 0.1875px;
   color: var(--color-grayish-blue);
 }
