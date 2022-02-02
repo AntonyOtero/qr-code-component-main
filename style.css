@@ -19,20 +19,21 @@
 
 /* Default styles */
 body {
-  margin: 0;
   font: var(--font-size) var(--font-family);
   background: var(--color-light-gray);
 }
 
-main {
-  height: 100vh;
-  width: 100vw;
-}
-
+body,
 h1,
 p {
   margin: 0;
 }
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+
 
 /* Class styles */
 .card {
